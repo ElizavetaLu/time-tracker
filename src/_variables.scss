@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600&display=swap');
+
+$main: #312890;
+$dummy-color: rgba(0, 0, 0, 0.469);
+
+@mixin flex_center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin button {
+    height: 40px;
+    border: none;
+    background-color: #f1edff;
+    text-transform: uppercase;
+    color: $main;
+    padding: 10px 20px;
+    font-weight: 600;
+    border-radius: 2px;
+}
+
+@mixin hide_long_text {
+    text-transform: uppercase;
+    overflow: hidden;
+    overflow-x: scroll;
+}

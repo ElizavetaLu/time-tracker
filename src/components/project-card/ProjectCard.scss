@@ -1,0 +1,44 @@
+@import "../../variables";
+
+
+.project-card {
+    box-sizing: border-box;
+    padding: 15px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 3px;
+    position: relative;
+    background-color: #ffffff94;
+    width: 90%;
+    margin-top: 15px;
+    color: #fff;
+
+    .delete {
+        position: absolute;
+        top: 2px;
+        right: 2px;
+    }
+
+    .prj-name {
+        width: 100%;
+        font-size: 18px;
+        @include hide_long_text;
+        margin-bottom: 3px;
+    }
+
+    .prj-name::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+
+
+    .btn {
+        margin-top: 7px;
+        align-self: center;
+
+        .button {
+            @include button;
+        }
+    }
+}

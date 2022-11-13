@@ -1,0 +1,98 @@
+@import "../../../variables";
+
+
+.timesheets {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+
+    .title {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .cards-info {
+        display: flex;
+        flex-direction: column;
+
+        .header {
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 45px;
+            border-bottom: 2px solid rgb(207, 207, 207);
+            border-top: 2px solid rgb(207, 207, 207);
+
+            font-size: 18px;
+            font-weight: 600;
+
+
+            .prj {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 55%;
+
+                .number-name {
+                    display: flex;
+                    align-items: center;
+                    min-width: 40%;
+
+
+                    .numb {
+                        width: 48px;
+                    }
+
+                    .prj-name {
+                        width: 100%;
+                        padding-left: 10px;
+                    }
+
+                }
+
+
+                .prj-assignment {
+                    min-width: 60%;
+                    height: 45px;
+                    @include flex_center;
+                }
+            }
+
+            .prj-date {
+                height: 45px;
+                @include flex_center;
+                width: 15%;
+            }
+
+            .time {
+                height: 45px;
+                @include flex_center;
+                width: 10%;
+            }
+        }
+
+        .done-cards {
+            height: 40vh;
+            overflow: hidden;
+            overflow-y: scroll;
+            display: flex;
+            flex-direction: column;
+
+            .dummy {
+                margin-top: 10px;
+                color: $dummy-color;
+            }
+        }
+    }
+}
+
+.border {
+    border-right: 2px solid rgb(207, 207, 207);
+    border-left: 2px solid rgb(207, 207, 207);
+}
+
+.border-left {
+    border-left: 2px solid rgb(207, 207, 207);
+}

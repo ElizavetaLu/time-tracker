@@ -1,0 +1,20 @@
+@import "../../../variables";
+
+.progress-list {
+    margin-top: 10px;
+
+    .title {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .progress-cards {
+        height: 35vh;
+        overflow: hidden;
+        overflow-y: scroll;
+
+        .dummy {
+            color: $dummy-color;
+        }
+    }
+}

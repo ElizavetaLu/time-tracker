@@ -1,0 +1,63 @@
+@import "../../variables";
+
+.modal {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(103, 103, 103, 0.124);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+    z-index: 100;
+
+
+    .modal-content {
+        box-sizing: border-box;
+        padding: 20px;
+        border-radius: 3px;
+        background-color: $main;
+        width: 30vw;
+        min-height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        .project-name{
+            @include hide_long_text;
+            color: #fff;
+            font-size: 18px;
+        }
+
+        .input {
+            height: 40px;
+            border: none;
+            background-color: transparent;
+            border-bottom: 1px solid rgb(249, 238, 255);
+            color: #fff;
+            font-size: 18px;
+            font-weight: 400;
+            width: 100%;
+        }
+
+        textarea,.input:focus{
+            outline: none;
+        }
+
+        .btn {
+            .button {
+                @include button;
+            }
+        }
+    }
+}
+
+.modal.active {
+    opacity: 1;
+    pointer-events: all;
+}

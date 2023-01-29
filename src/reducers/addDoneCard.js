@@ -40,18 +40,3 @@ const addDoneCardReducer = (state = [], action) => {
 }
 
 export default addDoneCardReducer
-
-
-
-
-
-
-
-
-
-
-
-        // case 'DEL_CARD': {
-        //     return state = state.filter(card => card.assignment !== action.assignment);
-
-        // };

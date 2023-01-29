@@ -1,5 +1,5 @@
-export default (counter) => {
-    // console.log(counter)
+const formatTime = counter => {
+    
     const hours = Math.floor(counter / 3600);
     const minutes = Math.floor(counter / 60) - (hours * 60);
     const seconds = counter % 60;
@@ -10,3 +10,4 @@ export default (counter) => {
         seconds.toString().padStart(2, '0')
     ].join(':');
 }
+export default formatTime

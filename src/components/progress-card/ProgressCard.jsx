@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
-import "./progressCard.scss"
-import formatted from "../../formatTime"
+import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { removeProgressCard, addDoneCard  } from "../../actions";
+import formatted from "../../formatTime";
+import "./progressCard.scss";
 
 
 const ProgressCard = ({ name, assignment }) => {

@@ -7,7 +7,6 @@ const ProjectCard = ({name, price, setPrjName}) => {
 
     const dispatch = useDispatch()
 
-
     return (
         <div className="project-card">
             <div className="delete" onClick={()=> dispatch(deleteProject(name))}>

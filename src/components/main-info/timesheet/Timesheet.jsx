@@ -6,7 +6,6 @@ const Timesheet = () => {
 
     const cards = useSelector(state => state.addDoneCard);
 
-
     return (
         <div className="timesheets">
             <div className="title">Timesheets</div>

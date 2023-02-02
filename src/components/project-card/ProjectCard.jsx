@@ -1,14 +1,11 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { deleteProject, openStartModal } from "../../actions";
-import StartModal from "../../modals/start-modal/StartModal"
 import "./ProjectCard.scss"
 
 const ProjectCard = ({name, price, setPrjName}) => {
 
-    // const isActive = useSelector(state => state.openStartModal)
     const dispatch = useDispatch()
-
 
     return (
         <div className="project-card">
@@ -23,8 +20,6 @@ const ProjectCard = ({name, price, setPrjName}) => {
                     dispatch(openStartModal())}
                     }>start</button>
             </div>
-
-            {/* <StartModal isActive={isActive} name={name} /> */}
         </div>
     )
 }

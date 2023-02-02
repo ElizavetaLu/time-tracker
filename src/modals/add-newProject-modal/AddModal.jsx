@@ -12,8 +12,6 @@ const AddModal = ({ isActive }) => {
 
     const dispatch = useDispatch()
 
-
-
     return (
         <div className={isActive ? "modal active" : "modal"} onClick={()=>dispatch(openAddModal())}>
             <div className="modal-content" onClick={e => e.stopPropagation()}>

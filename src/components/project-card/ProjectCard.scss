@@ -2,43 +2,70 @@
 
 
 .project-card {
+    margin: 15px 0px;
     box-sizing: border-box;
-    padding: 15px 15px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    border-radius: 3px;
-    position: relative;
-    background-color: #ffffff94;
+    background-color: #8c98ef;
     width: 90%;
-    margin-top: 15px;
-    color: #fff;
+    border-radius: 15px;
+    color: $light-color;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
 
-    .delete {
-        position: absolute;
-        top: 2px;
-        right: 2px;
+
+    .header {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        padding: 15px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #96a3f0;
+
+        .delete {
+            cursor: pointer;
+            height: 19px;
+            @include flex_center;
+
+            .delete-icon {
+                height: 19px;
+            }
+        }
     }
 
-    .prj-name {
-        width: 100%;
-        font-size: 18px;
-        @include hide_long_text;
-        margin-bottom: 3px;
-    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        margin: 15px 0px;
+        padding: 0px 20px;
 
-    .prj-name::-webkit-scrollbar {
-        width: 0;
-        height: 0;
-    }
+        .name {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
 
+        .price {
+            font-size: 20px;
+        }
+    }
 
     .btn {
-        margin-top: 7px;
-        align-self: center;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 20px;
 
         .button {
-            @include button;
+            @include button($button_1);
+        }
+
+        .button:hover {
+            transform: translateY(-1px);
+            box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+        }
+
+        .button:active {
+            transform: translateY(0px);
+            box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
         }
     }
 }

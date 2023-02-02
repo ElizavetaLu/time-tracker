@@ -2,36 +2,17 @@
 
 .proj-container {
     width: 20%;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     background-color: $main;
+    padding-top: 15px;
+    min-height: 100vh;
 
-    .logo {
-        display: flex;
-        height: 70px;
-        padding: 15px 20px;
-        border-bottom: 1px solid white;
-        box-sizing: border-box;
-
-        .icon {
-            .logo-icon {
-                width: 40px;
-            }
-        }
-
-        .logo-text {
-            color: rgba(255, 255, 255, 0.817);
-            display: flex;
-            align-items: flex-start;
-            text-transform: uppercase;
-
-            .left {
-                transform: rotate(-180deg);
-                writing-mode: vertical-lr;
-            }
-
-        }
+    .title {
+        padding-left: 20px;
+        font-size: 30px;
+        margin-bottom: 10px;
+        color: $light-color;
     }
 
     .created-projects {

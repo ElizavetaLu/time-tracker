@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600&display=swap');
 
-$main: #312890;
+$main: #6675ee;
+$button_1: #6bcee4;
+$light-bg: #6676ee1e;
 $dummy-color: rgba(0, 0, 0, 0.469);
+
+$light-color: #fff;
+$dark-color: #302c4e;
 
 @mixin flex_center {
     display: flex;
@@ -9,15 +14,18 @@ $dummy-color: rgba(0, 0, 0, 0.469);
     justify-content: center;
 }
 
-@mixin button {
+@mixin button($background_color) {
+    cursor: pointer;
     height: 40px;
     border: none;
-    background-color: #f1edff;
     text-transform: uppercase;
-    color: $main;
+    background-color: $background_color;
+    color: $light-color;
     padding: 10px 20px;
     font-weight: 600;
-    border-radius: 2px;
+    border-radius: 14px;
+    transition: 0.2s;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
 }
 
 @mixin hide_long_text {

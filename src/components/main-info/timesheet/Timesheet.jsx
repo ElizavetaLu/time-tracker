@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import DoneRow from "./done-row/DoneRow";
-import "./timesheet.scss"
+import "./timesheet.scss";
 
 const Timesheet = () => {
 

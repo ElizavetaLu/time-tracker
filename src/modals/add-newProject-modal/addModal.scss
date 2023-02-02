@@ -1,58 +1,19 @@
 @import "../../variables";
 
 .modal {
-    height: 100vh;
-    width: 100vw;
-    background-color:  rgba(103, 103, 103, 0.124);
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: 0.5s;
-    z-index: 100;
-
-
     .modal-content {
-        box-sizing: border-box;
-        padding: 20px;
-        border-radius: 3px;
-        background-color: $main;
-        width: 30vw;
-        min-height: 200px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-
-        .input {
-            height: 40px;
-            border: none;
-            background-color: transparent;
-            border-bottom: 1px solid rgb(249, 238, 255);
-            color: #fff;
-            font-size: 18px;
-            font-weight: 400;
-            width: 100%;
+        .input.f {
+            margin-top: 20px;
         }
 
-        textarea,
-        .input:focus {
-            outline: none;
+        .input::-webkit-outer-spin-button,
+        .input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
         }
 
-        .btn {
-            .button {
-                @include button;
-            }
+        .input[type=number] {
+            -moz-appearance: textfield;
         }
     }
-}
-
-.modal.active {
-    opacity: 1;
-    pointer-events: all;
 }

@@ -1,15 +1,14 @@
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { removeProgressCard, addDoneCard  } from "../../actions";
+import { removeProgressCard, addDoneCard } from "../../redux/actions";
 import formatted from "../../formatTime";
 import "./progressCard.scss";
 
 
 const ProgressCard = ({ name, assignment }) => {
 
-    const [task, setTask] = useState(assignment)
-    const dispatch = useDispatch()
-
+    const [task, setTask] = useState(assignment);
+    const dispatch = useDispatch();
 
     const [start, setStart] = useState(+new Date());
 
@@ -29,7 +28,7 @@ const ProgressCard = ({ name, assignment }) => {
         <div className="progress-card">
             <div className="day">
                 <div className="number">{new Date(start).getDate()}</div>
-                <div className="month">{new Date(start).toString().slice(4,8)}</div>
+                <div className="month">{new Date(start).toString().slice(4, 8)}</div>
             </div>
 
             <div className="project-info">
@@ -45,8 +44,8 @@ const ProgressCard = ({ name, assignment }) => {
                             onClick={() => isCounting ? setIsCounting(false) : setIsCounting(true)}
                         >{isCounting ? 'pause' : 'resume'}</button>
                         <button className="button" onClick={() => {
-                            dispatch(removeProgressCard(task, assignment))
-                            dispatch(addDoneCard(name, task, assignment, start, +new Date(), counter))
+                            dispatch(removeProgressCard(task, assignment));
+                            dispatch(addDoneCard(name, task, assignment, start, +new Date(), counter));
                         }}>done</button>
                     </div>
                 </div>

@@ -1,11 +1,10 @@
-import React from "react";
 import { useSelector } from "react-redux";
 import ProgressCard from "../../progress-card/ProgressCard";
-import "./ProgressList.scss"
+import "./ProgressList.scss";
 
 const ProgressList = () => {
 
-    const cards = useSelector(state => state.addProgressCard)
+    const cards = useSelector(state => state.addProgressCard);
 
     return (
         <div className="progress-list">

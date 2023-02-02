@@ -1,6 +1,6 @@
-import './App.scss';
 import CreatedProjects from './components/created-projects/CreatedProgects';
-import MainInfo from './components/main-info/MainInfo'
+import MainInfo from './components/main-info/MainInfo';
+import './App.scss';
 
 const App = () => {
   return (

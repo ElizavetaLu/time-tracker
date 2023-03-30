@@ -11,7 +11,7 @@ const ProjectCard = ({ name, price, setPrjName, date }) => {
             <div className="header">
                 <div className="data">{date}</div>
                 <div onClick={() => dispatch(deleteProject(name))} className="delete">
-                    <img src="/icons/icons8-trash-96.png" alt="del" className="delete-icon" />
+                    <img src="/time-tracker/build//icons/icons8-trash-96.png" alt="del" className="delete-icon" />
                 </div>
             </div>
 

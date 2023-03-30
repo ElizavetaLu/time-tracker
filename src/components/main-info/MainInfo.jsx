@@ -15,7 +15,7 @@ const MainInfo = () => {
             <div className="header">
                 <div className="date">
                     <div className="icon">
-                        <img src="/icons/icons8-calendar-week-96.png" alt="" />
+                        <img src="/time-tracker/build//icons/icons8-calendar-week-96.png" alt="" />
                     </div>
                     <div className="current-date">{new Date().toString().slice(0, 16)}</div>
                 </div>
